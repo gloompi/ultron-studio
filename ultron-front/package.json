@@ -1,0 +1,71 @@
+{
+  "name": "gatsby-ts-boilerplate",
+  "private": false,
+  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "GloompiQue Web <gloompi@gmail.com>",
+  "keywords": [
+    "gatsby"
+  ],
+  "dependencies": {
+    "@emotion/core": "^10.0.22",
+    "@emotion/styled": "^10.0.23",
+    "@mdx-js/mdx": "^1.5.1",
+    "@mdx-js/react": "^1.5.1",
+    "emotion-theming": "^10.0.19",
+    "gatsby": "^2.17.11",
+    "gatsby-background-image": "^0.9.6",
+    "gatsby-image": "^2.2.31",
+    "gatsby-plugin-emotion": "^4.1.14",
+    "gatsby-plugin-manifest": "^2.2.27",
+    "gatsby-plugin-mdx": "^1.0.56",
+    "gatsby-plugin-offline": "^3.0.19",
+    "gatsby-plugin-react-helmet": "^3.1.14",
+    "gatsby-plugin-sharp": "^2.2.37",
+    "gatsby-plugin-tslint": "^0.0.2",
+    "gatsby-plugin-typescript": "^2.1.16",
+    "gatsby-source-filesystem": "^2.1.36",
+    "gatsby-transformer-sharp": "^2.3.3",
+    "lodash": "^4.17.15",
+    "prop-types": "^15.7.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-helmet": "^5.2.1",
+    "react-icons": "^3.8.0",
+    "react-spring": "^8.0.27",
+    "react-waypoint": "^9.0.2"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.148",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.4",
+    "@types/react-helmet": "^5.0.14",
+    "gatsby-plugin-webpack-bundle-analyzer": "^1.0.5",
+    "prettier": "^1.19.1",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-loader": "^3.5.4",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^4.1.0",
+    "typescript": "^3.7.2"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "start": "GATSBY_GRAPHQL_IDE=playground gatsby develop -p 7777",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "serve": "gatsby serve",
+    "analyze": "ANALYZE_BUNDLE_SIZE=true gatsby build",
+    "typecheck": "tsc --noEmit",
+    "lint": "tslint --project .",
+    "check": "yarn run lint && yarn run typecheck",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gloompi/gatsby-ts-boilerplate"
+  },
+  "bugs": {
+    "url": "https://github.com/gloompi/gatsby-ts-boilerplate/issues"
+  }
+}

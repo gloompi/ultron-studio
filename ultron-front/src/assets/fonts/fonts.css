@@ -1,0 +1,77 @@
+@font-face {
+  font-family: Roboto;
+  font-weight: 400;
+  font-style: normal;
+  src: url("Roboto-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: Roboto-Condensed;
+  font-weight: 700;
+  font-style: normal;
+  src: url("RobotoCondensed-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: Roboto-Bold;
+  font-weight: 400;
+  font-style: italic;
+  src: url("Roboto-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: Roboto-Thin;
+  font-weight: 700;
+  font-style: normal;
+  src: url("Roboto-Thin.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: Roboto-Light;
+  font-weight: 700;
+  font-style: normal;
+  src: url("Roboto-Light.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: Roboto-Medium;
+  font-weight: 700;
+  font-style: normal;
+  src: url("Roboto-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: Roboto-Black;
+  font-weight: 700;
+  font-style: normal;
+  src: url("Roboto-Black.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: Hind;
+  font-weight: 700;
+  font-style: normal;
+  src: url("hind-regular.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: Hind-Bold;
+  font-weight: 700;
+  font-style: normal;
+  src: url("hind-bold.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: Hind-Light;
+  font-weight: 700;
+  font-style: normal;
+  src: url("hind-light.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: Hind-Medium;
+  font-weight: 700;
+  font-style: normal;
+  src: url("hind-medium.otf") format("opentype");
+  font-display: swap;
+}

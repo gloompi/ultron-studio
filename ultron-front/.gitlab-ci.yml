@@ -1,0 +1,39 @@
+image: alpine:latest
+
+stages:
+  - test
+  - deploy
+
+test:
+  stage: test
+  only:
+    - develop
+    - master
+  before_script:
+    - apk update
+    - apk upgrade
+    - apk add --update nodejs-current
+    - apk add --update yarn
+    - yarn install
+  script:
+    - yarn run check
+
+step-deploy-prod:
+  stage: deploy
+  only:
+    - master
+  before_script:
+    - apk update
+    - apk upgrade
+    - apk add --update docker.io
+    - apk add --update py-pip
+    - apk add --update python-dev libffi-dev openssl-dev gcc libc-dev make
+    - pip install docker-compose
+    - apk add --update git
+  script:
+    - git pull origin master
+    - docker-compose down
+    - docker-compose up -d --build
+  environment:
+    name: production
+  when: on_success
