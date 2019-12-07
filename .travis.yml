@@ -1,0 +1,36 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker image build -t gloompi/front-test -f ./ultron-front/Dockerfile.dev ./ultron-front
+
+script:
+  - docker container run gloompi/front-test yarn run check
+
+after_script:
+  - docker image build -t gloompi/ultron-front ./ultron-front
+  - docker image build -t gloompi/ultron-nginx ./ultron-nginx
+  - docker image build -t gloompi/ultron-api ./ultron-api
+
+  # Log in to the docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+
+  # Take those images and push them to the docker hub
+  - docker push gloompi/ultron-front
+  - docker push gloompi/ultron-nginx
+  - docker push gloompi/ultron-api
+
+# deploy:
+#   provider: elasticbeanstalk
+#   region: us-east-1
+#   app: multi-docker
+#   env: MultiDocker-env
+#   bucket_name: elasticbeanstalk-us-east-1-020591658655
+#   bucket_path: docker-multi
+#   on:
+#     branch: master
+#   access_key_id: $AWS_ACCESS_KEY
+#   secret_access_key:
+#     secure: $AWS_SECRET_KEY
