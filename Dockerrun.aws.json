@@ -1,0 +1,26 @@
+{
+	"AWSEBDockerrunVersion": 2,
+	"containerDefinitions": [{
+		"name": "front",
+		"image": "gloompi/ultron-client",
+		"hostname": "frontend",
+		"essential": false,
+    "memory": 128
+	}, {
+		"name": "api",
+		"image": "gloompi/ultron-api",
+		"hostname": "api",
+		"essential": false,
+    "memory": 128
+	}, {
+		"name": "nginx",
+		"image": "gloompi/ultron-nginx",
+		"essential": true,
+		"portMappings": [{
+			"hostPort": 80,
+			"containerPort": 80
+		}],
+		"links": ["front", "api"],
+    "memory": 128
+	}]
+}
