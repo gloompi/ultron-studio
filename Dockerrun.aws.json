@@ -1,15 +1,15 @@
 {
 	"AWSEBDockerrunVersion": 2,
 	"containerDefinitions": [{
-		"name": "front",
-		"image": "gloompi/ultron-front",
-		"hostname": "frontend",
-		"essential": false,
-    "memory": 128
-	}, {
 		"name": "api",
 		"image": "gloompi/ultron-api",
 		"hostname": "api",
+		"essential": false,
+    "memory": 128
+	}, {
+		"name": "front",
+		"image": "gloompi/ultron-front",
+		"hostname": "frontend",
 		"essential": false,
     "memory": 128
 	}, {

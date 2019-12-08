@@ -54,7 +54,7 @@
     "build": "gatsby build",
     "start": "GATSBY_GRAPHQL_IDE=playground gatsby develop -p 7777",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "serve": "gatsby serve",
+    "serve": "gatsby serve -p 7777",
     "analyze": "ANALYZE_BUNDLE_SIZE=true gatsby build",
     "typecheck": "tsc --noEmit",
     "lint": "tslint --project .",
